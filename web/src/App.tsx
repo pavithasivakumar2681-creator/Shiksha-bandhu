@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 type SessionLike = { user?: { id: string } } | null;
 import { supabase, envOk } from './lib/supabaseClient.ts';
+import { SubjectView } from './pages/student/SubjectView.tsx';
 
 import { Header } from './components/Header.tsx';
 import { Landing } from './pages/Landing.tsx';
@@ -74,6 +75,7 @@ function App() {
         <Route path="/auth" element={!session ? <AuthPage /> : (profileRole === 'student' ? <Navigate to="/student" replace /> : (profileRole === 'teacher' ? <Navigate to="/teacher" replace /> : <Navigate to="/onboarding" replace />))} />
         <Route path="/onboarding" element={session ? <StudentOnboarding /> : <Navigate to="/auth" replace />} />
         <Route path="/student" element={session ? <StudentDashboard /> : <Navigate to="/auth" replace />} />
+        <Route path="/subject/:subjectId" element={session ? <SubjectView /> : <Navigate to="/auth" replace />} />
         <Route path="/teacher" element={session && profileRole === 'teacher' ? <TeacherDashboard /> : <Navigate to="/auth" replace />} />
         <Route path="/lesson/:lessonId" element={session && profileRole === 'student' ? <Lesson /> : <Navigate to="/auth" replace />} />
         <Route path="/leaderboard" element={<Leaderboard />} />

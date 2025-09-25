@@ -1,24 +1,33 @@
 {
   "PHY11": {
     "1": {
-      "title": "Units and Measurements",
+      "title": "Physical World and Measurement",
       "questions": [
         {
-          "prompt": "The SI base unit of mass is",
+          "prompt": "The SI base unit of electric current is?",
           "options": [
-            { "label": "Kilogram", "correct": true },
-            { "label": "Gram", "correct": false },
-            { "label": "Pound", "correct": false },
-            { "label": "Newton", "correct": false }
+            { "label": "Coulomb", "correct": false },
+            { "label": "Ampere", "correct": true },
+            { "label": "Volt", "correct": false },
+            { "label": "Ohm", "correct": false }
           ]
         },
         {
-          "prompt": "1 meter equals",
+          "prompt": "The number of significant figures in 0.0050 meters is:",
           "options": [
-            { "label": "100 cm", "correct": true },
-            { "label": "10 cm", "correct": false },
-            { "label": "1000 cm", "correct": false },
-            { "label": "1 cm", "correct": false }
+            { "label": "2", "correct": true },
+            { "label": "1", "correct": false },
+            { "label": "3", "correct": false },
+            { "label": "4", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The dimensional formula for Impulse is:",
+          "options": [
+            { "label": "M L T⁻¹", "correct": true },
+            { "label": "M L² T⁻²", "correct": false },
+            { "label": "M L T⁻²", "correct": false },
+            { "label": "M T⁻¹", "correct": false }
           ]
         }
       ]
@@ -27,12 +36,122 @@
       "title": "Kinematics",
       "questions": [
         {
-          "prompt": "Displacement is a",
+          "prompt": "The area under the velocity-time graph represents which physical quantity?",
           "options": [
-            { "label": "Vector quantity", "correct": true },
-            { "label": "Scalar quantity", "correct": false },
-            { "label": "Dimensionless quantity", "correct": false },
-            { "label": "Unitless quantity", "correct": false }
+            { "label": "Acceleration", "correct": false },
+            { "label": "Displacement", "correct": true },
+            { "label": "Force", "correct": false },
+            { "label": "Momentum", "correct": false }
+          ]
+        },
+        {
+          "prompt": "For an object moving with a constant velocity, the acceleration is:",
+          "options": [
+            { "label": "Constant and positive", "correct": false },
+            { "label": "Increasing", "correct": false },
+            { "label": "Zero", "correct": true },
+            { "label": "Negative", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The vertical component of a projectile's velocity at its maximum height is:",
+          "options": [
+            { "label": "Maximum", "correct": false },
+            { "label": "Minimum (Zero)", "correct": true },
+            { "label": "Equal to horizontal component", "correct": false },
+            { "label": "Varies with angle", "correct": false }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "Laws of Motion",
+      "questions": [
+        {
+          "prompt": "Newton's second law of motion gives the measure of:",
+          "options": [
+            { "label": "Inertia", "correct": false },
+            { "label": "Force", "correct": true },
+            { "label": "Work", "correct": false },
+            { "label": "Momentum", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The principle of conservation of linear momentum is a consequence of which Newton's law?",
+          "options": [
+            { "label": "First Law", "correct": false },
+            { "label": "Second Law", "correct": false },
+            { "label": "Third Law", "correct": true },
+            { "label": "First and Second Law combined", "correct": false }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "Work, Energy and Power",
+      "questions": [
+        {
+          "prompt": "Which of the following is a non-conservative force?",
+          "options": [
+            { "label": "Gravitational force", "correct": false },
+            { "label": "Spring force", "correct": false },
+            { "label": "Viscous force (Air Resistance)", "correct": true },
+            { "label": "Electrostatic force", "correct": false }
+          ]
+        },
+        {
+          "prompt": "In an inelastic collision:",
+          "options": [
+            { "label": "Momentum is conserved, but kinetic energy is not conserved.", "correct": true },
+            { "label": "Both momentum and kinetic energy are conserved.", "correct": false },
+            { "label": "Kinetic energy is conserved, but momentum is not conserved.", "correct": false },
+            { "label": "Neither momentum nor kinetic energy are conserved.", "correct": false }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "title": "Rotational Motion",
+      "questions": [
+        {
+          "prompt": "The quantity which is a rotational analogue of mass in linear motion is:",
+          "options": [
+            { "label": "Torque", "correct": false },
+            { "label": "Angular Momentum", "correct": false },
+            { "label": "Moment of Inertia", "correct": true },
+            { "label": "Angular Velocity", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The Centre of Mass of a uniform rod lies at:",
+          "options": [
+            { "label": "One end of the rod", "correct": false },
+            { "label": "Quarter of its length", "correct": false },
+            { "label": "Its geometrical center (midpoint)", "correct": true },
+            { "label": "Outside the rod", "correct": false }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "title": "Gravitation",
+      "questions": [
+        {
+          "prompt": "Kepler's Second Law of Planetary Motion is equivalent to the conservation of:",
+          "options": [
+            { "label": "Linear momentum", "correct": false },
+            { "label": "Kinetic energy", "correct": false },
+            { "label": "Angular momentum", "correct": true },
+            { "label": "Total mechanical energy", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The orbital velocity of a satellite depends on:",
+          "options": [
+            { "label": "Mass of the satellite", "correct": false },
+            { "label": "Mass of the planet and orbital radius", "correct": true },
+            { "label": "Spin of the satellite", "correct": false },
+            { "label": "Gravitational potential only", "correct": false }
           ]
         }
       ]
@@ -43,12 +162,1144 @@
       "title": "Some Basic Concepts of Chemistry",
       "questions": [
         {
-          "prompt": "Avogadro number is approximately",
+          "prompt": "Which one of the following is NOT a fundamental law of chemical combination?",
           "options": [
-            { "label": "6.022 × 10^23", "correct": true },
-            { "label": "3.14", "correct": false },
-            { "label": "9.81", "correct": false },
-            { "label": "1.6 × 10^-19", "correct": false }
+            { "label": "Law of Conservation of Mass", "correct": false },
+            { "label": "Law of Multiple Proportions", "correct": false },
+            { "label": "Law of Octaves", "correct": true },
+            { "label": "Law of Reciprocal Proportions", "correct": false }
+          ]
+        },
+        {
+          "prompt": "An oxidant is a substance that:",
+          "options": [
+            { "label": "Undergoes oxidation", "correct": false },
+            { "label": "Causes oxidation and itself is reduced", "correct": true },
+            { "label": "Donates hydrogen", "correct": false },
+            { "label": "Is always an acid", "correct": false }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "Structure of Atom",
+      "questions": [
+        {
+          "prompt": "Isotopes are atoms of the same element that have:",
+          "options": [
+            { "label": "Same mass number but different atomic number", "correct": false },
+            { "label": "Same number of protons but different number of neutrons", "correct": true },
+            { "label": "Different number of electrons", "correct": false },
+            { "label": "Different chemical properties", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The principle that states that no two electrons in an atom can have the same set of four quantum numbers is:",
+          "options": [
+            { "label": "Aufbau Principle", "correct": false },
+            { "label": "Hund's Rule", "correct": false },
+            { "label": "Pauli's Exclusion Principle", "correct": true },
+            { "label": "Heisenberg Uncertainty Principle", "correct": false }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "Classification & Periodicity",
+      "questions": [
+        {
+          "prompt": "Who is credited with the Modern Periodic Law, stating that properties of elements are a periodic function of their atomic number?",
+          "options": [
+            { "label": "Dmitri Mendeleev", "correct": false },
+            { "label": "Lothar Meyer", "correct": false },
+            { "label": "Henry Moseley", "correct": true },
+            { "label": "John Newlands", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Across a period in the periodic table, the metallic character generally:",
+          "options": [
+            { "label": "Increases", "correct": false },
+            { "label": "Decreases", "correct": true },
+            { "label": "Remains constant", "correct": false },
+            { "label": "First increases then decreases", "correct": false }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "Chemical Bonding and Molecular Structure",
+      "questions": [
+        {
+          "prompt": "The maximum number of hydrogen bonds formed by a single water molecule (H₂O) in its liquid state is:",
+          "options": [
+            { "label": "2", "correct": false },
+            { "label": "3", "correct": false },
+            { "label": "4", "correct": true },
+            { "label": "1", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The geometry of $SF_6$ according to VSEPR theory is:",
+          "options": [
+            { "label": "Trigonal bipyramidal", "correct": false },
+            { "label": "Tetrahedral", "correct": false },
+            { "label": "Octahedral", "correct": true },
+            { "label": "Square planar", "correct": false }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "title": "States of Matter: Gases and Liquids",
+      "questions": [
+        {
+          "prompt": "Boyle's law states that for a fixed mass of gas at a constant temperature:",
+          "options": [
+            { "label": "$P \\propto V$", "correct": false },
+            { "label": "$P \\propto 1/V$", "correct": true },
+            { "label": "$V \\propto T$", "correct": false },
+            { "label": "$P V \\propto T$", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The temperature above which a gas cannot be liquefied, no matter how high the pressure is:",
+          "options": [
+            { "label": "Boiling point", "correct": false },
+            { "label": "Critical temperature", "correct": true },
+            { "label": "Triple point", "correct": false }
+          ]
+        }
+      ]
+    }
+  },
+  "BIO11": {
+    "1": {
+      "title": "Diversity in Living World & Classification",
+      "questions": [
+        {
+          "prompt": "In the binomial nomenclature *Mangifera indica*, the second word 'indica' represents the:",
+          "options": [
+            { "label": "Genus", "correct": false },
+            { "label": "Species", "correct": true },
+            { "label": "Family", "correct": false },
+            { "label": "Order", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The Five-Kingdom Classification system was proposed by:",
+          "options": [
+            { "label": "Carolus Linnaeus", "correct": false },
+            { "label": "R.H. Whittaker", "correct": true },
+            { "label": "C. Woese", "correct": false }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "Structural Organization: Tissues & Cockroach",
+      "questions": [
+        {
+          "prompt": "Which plant tissue is responsible for increasing the girth (diameter) of the stem and root?",
+          "options": [
+            { "label": "Apical meristem", "correct": false },
+            { "label": "Intercalary meristem", "correct": false },
+            { "label": "Lateral meristem (Vascular Cambium)", "correct": true },
+            { "label": "Parenchyma", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Which type of animal tissue lines the body cavities, ducts, and forms the outer covering of the skin?",
+          "options": [
+            { "label": "Connective tissue", "correct": false },
+            { "label": "Epithelial tissue", "correct": true },
+            { "label": "Nervous tissue", "correct": false }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "Cell Structure, Biomolecules, & Division",
+      "questions": [
+        {
+          "prompt": "Which of the following cell organelles is part of the Endomembrane System?",
+          "options": [
+            { "label": "Mitochondria", "correct": false },
+            { "label": "Peroxisome", "correct": false },
+            { "label": "Golgi Bodies", "correct": true },
+            { "label": "Ribosome", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The stage of the cell cycle where DNA replication occurs is:",
+          "options": [
+            { "label": "G1 phase", "correct": false },
+            { "label": "S phase", "correct": true },
+            { "label": "G2 phase", "correct": false },
+            { "label": "M phase", "correct": false }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "Plant Physiology: Transport & Nutrition",
+      "questions": [
+        {
+          "prompt": "The movement of water through the cell walls and intercellular spaces of a plant is known as the:",
+          "options": [
+            { "label": "Symplast pathway", "correct": false },
+            { "label": "Apoplast pathway", "correct": true },
+            { "label": "Transmembrane pathway", "correct": false },
+            { "label": "Phloem transport", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Which respiratory process occurs under anaerobic conditions?",
+          "options": [
+            { "label": "Glycolysis", "correct": false },
+            { "label": "TCA Cycle", "correct": false },
+            { "label": "Fermentation", "correct": true }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "title": "Human Physiology: Digestion & Circulation",
+      "questions": [
+        {
+          "prompt": "The process of emulsification of fats in the small intestine is primarily aided by:",
+          "options": [
+            { "label": "Lipase enzyme", "correct": false },
+            { "label": "Bile salts", "correct": true },
+            { "label": "Trypsin enzyme", "correct": false },
+            { "label": "Gastric acid (HCl)", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The 'P' wave in a normal Electrocardiogram (ECG) represents:",
+          "options": [
+            { "label": "Ventricular depolarization", "correct": false },
+            { "label": "Atrial depolarization", "correct": true },
+            { "label": "Ventricular repolarization", "correct": false },
+            { "label": "Atrial repolarization", "correct": false }
+          ]
+        }
+      ]
+    }
+  },
+  "MAT11": {
+    "1": {
+      "title": "Sets and Functions",
+      "questions": [
+        {
+          "prompt": "If $A = \\{1, 2, 3\\}$ and $B = \\{3, 4, 5\\}$, then $A \\cup B$ is:",
+          "options": [
+            { "label": "\\{3\\}", "correct": false },
+            { "label": "\\{1, 2, 3, 4, 5\\}", "correct": true },
+            { "label": "\\{1, 2, 4, 5\\}", "correct": false },
+            { "label": "\\{1, 2, 3\\}", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The number of subsets of a set containing 'n' elements is:",
+          "options": [
+            { "label": "n²", "correct": false },
+            { "label": "2n", "correct": false },
+            { "label": "2^n", "correct": true },
+            { "label": "n!", "correct": false }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "Trigonometric Functions",
+      "questions": [
+        {
+          "prompt": "The value of $\\sin(30^{\\circ}) \\cos(60^{\\circ}) + \\cos(30^{\\circ}) \\sin(60^{\\circ})$ is:",
+          "options": [
+            { "label": "1/2", "correct": false },
+            { "label": "$\\sqrt{3}/2$", "correct": false },
+            { "label": "1", "correct": true },
+            { "label": "0", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The general solution of $\\sin(x) = \\sin(y)$ is given by:",
+          "options": [
+            { "label": "$x = n\\pi + (-1)^{n}y$", "correct": true },
+            { "label": "$x = 2n\\pi \\pm y$", "correct": false },
+            { "label": "$x = n\\pi + y$", "correct": false }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "Mathematical Induction, Complex Numbers & Quadratic Equations",
+      "questions": [
+        {
+          "prompt": "What is the imaginary unit $\\sqrt{-1}$ represented by in complex numbers?",
+          "options": [
+            { "label": "i", "correct": true },
+            { "label": "j", "correct": false },
+            { "label": "z", "correct": false },
+            { "label": "r", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The Fundamental Theorem of Algebra states that a polynomial of degree $n \\ge 1$ has at least one root in the domain of:",
+          "options": [
+            { "label": "Real numbers", "correct": false },
+            { "label": "Natural numbers", "correct": false },
+            { "label": "Complex numbers", "correct": true },
+            { "label": "Rational numbers", "correct": false }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "Linear Inequalities, Permutations & Combinations",
+      "questions": [
+        {
+          "prompt": "In how many ways can 5 distinct books be arranged on a shelf?",
+          "options": [
+            { "label": "5", "correct": false },
+            { "label": "25", "correct": false },
+            { "label": "120 (5!)", "correct": true },
+            { "label": "10", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The principle used to count the number of outcomes when there are sequential choices is the:",
+          "options": [
+            { "label": "Division Principle", "correct": false },
+            { "label": "Fundamental Principle of Counting", "correct": true },
+            { "label": "Pigeonhole Principle", "correct": false },
+            { "label": "Exclusion Principle", "correct": false }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "title": "Sequence and Series",
+      "questions": [
+        {
+          "prompt": "If $a, b, c$ are in Arithmetic Progression (A.P.), then $b$ is the:",
+          "options": [
+            { "label": "Geometric Mean", "correct": false },
+            { "label": "Harmonic Mean", "correct": false },
+            { "label": "Arithmetic Mean", "correct": true },
+            { "label": "Geometric Ratio", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The condition for an infinite Geometric Progression (G.P.) to have a finite sum is:",
+          "options": [
+            { "label": "The common ratio $|r| > 1$", "correct": false },
+            { "label": "The first term $a = 1$", "correct": false },
+            { "label": "The common ratio $|r| < 1$", "correct": true },
+            { "label": "The common ratio $r = 1$", "correct": false }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "title": "Co-ordinate Geometry: Lines & Conics",
+      "questions": [
+        {
+          "prompt": "The general equation of a line is of the form:",
+          "options": [
+            { "label": "$Ax^{2} + By^{2} = 1$", "correct": false },
+            { "label": "$Ax + By + C = 0$", "correct": true },
+            { "label": "$y = mx^{2} + c$", "correct": false }
+          ]
+        },
+        {
+          "prompt": "A conic section formed when a plane cuts through the double cone parallel to the base is a:",
+          "options": [
+            { "label": "Parabola", "correct": false },
+            { "label": "Ellipse", "correct": false },
+            { "label": "Circle", "correct": true },
+            { "label": "Hyperbola", "correct": false }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "title": "Limits and Derivatives",
+      "questions": [
+        {
+          "prompt": "The derivative of a function $f(x)$ at a point represents the:",
+          "options": [
+            { "label": "Area under the curve", "correct": false },
+            { "label": "Slope of the tangent to the curve at that point", "correct": true },
+            { "label": "Perimeter of the curve", "correct": false },
+            { "label": "Curvature of the curve", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The limit of a rational function $f(x)/g(x)$ exists at $x=a$ if:",
+          "options": [
+            { "label": "$f(a) = 0$", "correct": false },
+            { "label": "$g(a) = 0$", "correct": false },
+            { "label": "$g(a) \\ne 0$", "correct": true },
+            { "label": "$f(a) \\ne 0$", "correct": false }
+          ]
+        }
+      ]
+    }
+  },
+  "ENG11": {
+    "1": {
+      "title": "Prose: Standing Up for Yourself & The Legend Behind a Legend",
+      "questions": [
+        {
+          "prompt": "The primary message conveyed by the title 'Standing Up for Yourself' is the need for:",
+          "options": [
+            { "label": "Physical strength", "correct": false },
+            { "label": "Self-respect and self-assertion", "correct": true },
+            { "label": "Avoiding all conflict", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Who is the author of 'The Legend behind a Legend'?",
+          "options": [
+            { "label": "Nathaniel Hawthorne", "correct": false },
+            { "label": "Hariharan Balakrishnan", "correct": true },
+            { "label": "Louis Fischer", "correct": false }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "Prose: The Golden Touch & In London In Minus Fours",
+      "questions": [
+        {
+          "prompt": "The central theme of 'The Golden Touch' is a warning against:",
+          "options": [
+            { "label": "A desire for power", "correct": false },
+            { "label": "Excessive greed and materialism", "correct": true },
+            { "label": "The pursuit of knowledge", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The phrase 'In Minus Fours' in the title refers to:",
+          "options": [
+            { "label": "A missing suit", "correct": false },
+            { "label": "A very cold temperature", "correct": true },
+            { "label": "A low score in a game", "correct": false }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "Poetry: Stopping by Woods & Oft. in the Stilly Night",
+      "questions": [
+        {
+          "prompt": "Who is the poet of 'Stopping by Woods on a Snowy Evening'?",
+          "options": [
+            { "label": "Thomas Moore", "correct": false },
+            { "label": "Robert Frost", "correct": true },
+            { "label": "Robert Southey", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The phrase 'stilly night' in Thomas Moore's poem primarily suggests a:",
+          "options": [
+            { "label": "Stormy, dark night", "correct": false },
+            { "label": "Silent, quiet night", "correct": true },
+            { "label": "Night filled with music", "correct": false }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "Non-Detailed: Three Questions & After Twenty Years",
+      "questions": [
+        {
+          "prompt": "In Leo Tolstoy's 'Three Questions', what is the central problem the King seeks to solve?",
+          "options": [
+            { "label": "How to conquer neighboring kingdoms", "correct": false },
+            { "label": "Finding the most important time, person, and thing to do", "correct": true },
+            { "label": "Locating a hidden treasure", "correct": false }
+          ]
+        },
+        {
+          "prompt": "What common theme connects O. Henry's stories like 'After Twenty Years'?",
+          "options": [
+            { "label": "Scientific exploration", "correct": false },
+            { "label": "Twist endings or situational irony", "correct": true },
+            { "label": "Fantasy and magic", "correct": false }
+          ]
+        }
+      ]
+    }
+  },
+  "PHY12": {
+    "1": {
+      "title": "Electrostatics: Field, Potential and Capacitance",
+      "questions": [
+        {
+          "prompt": "Gauss's theorem is used to find the electric field due to which type of charge distribution?",
+          "options": [
+            { "label": "Only point charges", "correct": false },
+            { "label": "Symmetric charge distributions (e.g., infinite plane, long wire)", "correct": true },
+            { "label": "A dipole only", "correct": false },
+            { "label": "Any non-uniform charge distribution", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The magnitude of the torque experienced by an electric dipole in a uniform electric field is maximum when the dipole moment is:",
+          "options": [
+            { "label": "Parallel to the field", "correct": false },
+            { "label": "Perpendicular to the field", "correct": true },
+            { "label": "Anti-parallel to the field", "correct": false }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "Current Electricity",
+      "questions": [
+        {
+          "prompt": "Kirchhoff's Junction Rule is a consequence of the conservation of:",
+          "options": [
+            { "label": "Energy", "correct": false },
+            { "label": "Momentum", "correct": false },
+            { "label": "Charge", "correct": true },
+            { "label": "Current", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The resistance of a conductor is independent of:",
+          "options": [
+            { "label": "Resistivity of the material", "correct": false },
+            { "label": "Length of the conductor", "correct": false },
+            { "label": "Current flowing through it", "correct": true },
+            { "label": "Temperature", "correct": false }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "Magnetic Effects of Current and Magnetism",
+      "questions": [
+        {
+          "prompt": "The magnetic field at the center of a current carrying circular loop can be found using:",
+          "options": [
+            { "label": "Gauss's Law", "correct": false },
+            { "label": "Biot-Savart Law", "correct": true },
+            { "label": "Kirchhoff's Law", "correct": false },
+            { "label": "Ohm's Law", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Which of the following substances are weakly repelled by a magnetic field?",
+          "options": [
+            { "label": "Ferromagnetic", "correct": false },
+            { "label": "Paramagnetic", "correct": false },
+            { "label": "Diamagnetic", "correct": true },
+            { "label": "Electromagnetic", "correct": false }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "Electromagnetic Induction and Alternating Current",
+      "questions": [
+        {
+          "prompt": "Lenz's Law, which relates to induced EMF, is a consequence of the law of conservation of:",
+          "options": [
+            { "label": "Charge", "correct": false },
+            { "label": "Energy", "correct": true },
+            { "label": "Momentum", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The device that works on the principle of mutual induction is the:",
+          "options": [
+            { "label": "AC Generator", "correct": false },
+            { "label": "Transformer", "correct": true },
+            { "label": "Motor", "correct": false },
+            { "label": "Capacitor", "correct": false }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "title": "Ray Optics and Optical Instruments",
+      "questions": [
+        {
+          "prompt": "Which phenomenon is responsible for the blue color of the sky?",
+          "options": [
+            { "label": "Reflection", "correct": false },
+            { "label": "Total Internal Reflection", "correct": false },
+            { "label": "Scattering of light", "correct": true },
+            { "label": "Dispersion", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The power of a lens is defined as the reciprocal of its:",
+          "options": [
+            { "label": "Magnification", "correct": false },
+            { "label": "Focal length in meters", "correct": true },
+            { "label": "Refractive index", "correct": false }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "title": "Wave Optics",
+      "questions": [
+        {
+          "prompt": "Huygen's Principle can be used to explain which of the following?",
+          "options": [
+            { "label": "Photoelectric effect", "correct": false },
+            { "label": "Polarization", "correct": false },
+            { "label": "Reflection and refraction of light", "correct": true },
+            { "label": "Nuclear fission", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The principle of superposition of waves is the basis for:",
+          "options": [
+            { "label": "Interference", "correct": true },
+            { "label": "Beats", "correct": true },
+            { "label": "Diffraction", "correct": false }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "title": "Dual Nature of Radiation and Matter",
+      "questions": [
+        {
+          "prompt": "The particle nature of light is primarily demonstrated by the:",
+          "options": [
+            { "label": "Diffraction experiment", "correct": false },
+            { "label": "Photoelectric effect", "correct": true },
+            { "label": "Polarization experiment", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The de-Broglie relation connects the momentum of a particle to its:",
+          "options": [
+            { "label": "Frequency", "correct": false },
+            { "label": "Wavelength", "correct": true },
+            { "label": "Velocity", "correct": false }
+          ]
+        }
+      ]
+    },
+    "8": {
+      "title": "Atoms and Nuclei",
+      "questions": [
+        {
+          "prompt": "The mass defect in a nucleus represents the:",
+          "options": [
+            { "label": "Energy required to ionize the atom", "correct": false },
+            { "label": "Difference between the mass of the nucleus and the mass of its constituent nucleons", "correct": true },
+            { "label": "Mass of the electron cloud", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The process where a heavy nucleus splits into two smaller fragments is called:",
+          "options": [
+            { "label": "Nuclear fusion", "correct": false },
+            { "label": "Nuclear fission", "correct": true },
+            { "label": "Radioactive decay", "correct": false }
+          ]
+        }
+      ]
+    }
+  },
+  "CHE12": {
+    "1": {
+      "title": "Solid State and Solutions",
+      "questions": [
+        {
+          "prompt": "The number of atoms per unit cell in a Body-Centred Cubic (BCC) crystal structure is:",
+          "options": [
+            { "label": "1", "correct": false },
+            { "label": "2", "correct": true },
+            { "label": "4", "correct": false },
+            { "label": "6", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Elevation of boiling point is a colligative property that depends on the:",
+          "options": [
+            { "label": "Nature of the solvent", "correct": false },
+            { "label": "Number of solute particles in the solution", "correct": true },
+            { "label": "Nature of the solute", "correct": false }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "Electrochemistry and Chemical Kinetics",
+      "questions": [
+        {
+          "prompt": "The electrode potential for a half-cell reaction depends on the concentration of the species in solution. This relation is given by:",
+          "options": [
+            { "label": "Arrhenius Equation", "correct": false },
+            { "label": "Nernst Equation", "correct": true },
+            { "label": "Gibbs Equation", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The half-life period ($t_{1/2}$) for a first-order reaction is independent of:",
+          "options": [
+            { "label": "Temperature", "correct": false },
+            { "label": "Initial concentration of the reactant", "correct": true },
+            { "label": "Rate constant", "correct": false }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "p-Block Elements",
+      "questions": [
+        {
+          "prompt": "Which element in Group 15 is a metalloid?",
+          "options": [
+            { "label": "Nitrogen (N)", "correct": false },
+            { "label": "Phosphorus (P)", "correct": false },
+            { "label": "Arsenic (As)", "correct": true },
+            { "label": "Bismuth (Bi)", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Ozone ($O_3$) is an allotropic form of:",
+          "options": [
+            { "label": "Sulphur", "correct": false },
+            { "label": "Nitrogen", "correct": false },
+            { "label": "Oxygen", "correct": true }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "d- and f-Block Elements & Coordination Compounds",
+      "questions": [
+        {
+          "prompt": "The term 'lanthanoid contraction' is responsible for the similarity in atomic radii of which pair of elements?",
+          "options": [
+            { "label": "Titanium (Ti) and Zirconium (Zr)", "correct": false },
+            { "label": "Zirconium (Zr) and Hafnium (Hf)", "correct": true },
+            { "label": "Vanadium (V) and Niobium (Nb)", "correct": false }
+          ]
+        },
+        {
+          "prompt": "A species that donates an electron pair to a central metal atom/ion in a coordination compound is called a:",
+          "options": [
+            { "label": "Anion", "correct": false },
+            { "label": "Ligand", "correct": true },
+            { "label": "Cation", "correct": false }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "title": "Haloalkanes & Haloarenes, Alcohols, Phenols & Ethers",
+      "questions": [
+        {
+          "prompt": "Which of the following reaction mechanisms is characteristic of haloalkanes?",
+          "options": [
+            { "label": "Electrophilic addition", "correct": false },
+            { "label": "Nucleophilic substitution", "correct": true },
+            { "label": "Free radical substitution", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Phenols are more acidic than alcohols due to:",
+          "options": [
+            { "label": "Inductive effect", "correct": false },
+            { "label": "Hyperconjugation", "correct": false },
+            { "label": "Resonance stabilization of the phenoxide ion", "correct": true }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "title": "Aldehydes, Ketones, Carboxylic Acids & Amines",
+      "questions": [
+        {
+          "prompt": "The characteristic reaction of the carbonyl group (in aldehydes and ketones) is:",
+          "options": [
+            { "label": "Electrophilic substitution", "correct": false },
+            { "label": "Nucleophilic addition", "correct": true },
+            { "label": "Elimination reaction", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Which of the following organic compounds is the strongest acid?",
+          "options": [
+            { "label": "Phenol", "correct": false },
+            { "label": "Methanol", "correct": false },
+            { "label": "Carboxylic acid", "correct": true }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "title": "Biomolecules, Polymers, & Chemistry in Everyday Life",
+      "questions": [
+        {
+          "prompt": "The bonds responsible for holding together the primary structure of a protein are:",
+          "options": [
+            { "label": "Hydrogen bonds", "correct": false },
+            { "label": "Peptide bonds", "correct": true },
+            { "label": "Disulphide bridges", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The biodegradable polymer among the following is:",
+          "options": [
+            { "label": "Polythene", "correct": false },
+            { "label": "Nylon-6,6", "correct": false },
+            { "label": "PHBV", "correct": true }
+          ]
+        }
+      ]
+    }
+  },
+  "BIO12": {
+    "1": {
+      "title": "Reproduction in Organisms, Plants, and Humans",
+      "questions": [
+        {
+          "prompt": "The process of development of embryo from the zygote is called:",
+          "options": [
+            { "label": "Gametogenesis", "correct": false },
+            { "label": "Embryogenesis", "correct": true },
+            { "label": "Parthenogenesis", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Which is a post-fertilization event in flowering plants?",
+          "options": [
+            { "label": "Development of endosperm and embryo", "correct": true },
+            { "label": "Pollination", "correct": false },
+            { "label": "Gametogenesis", "correct": false }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "Genetics: Mendelian & Chromosomal Inheritance",
+      "questions": [
+        {
+          "prompt": "The phenomenon where a single gene product may produce more than one effect is known as:",
+          "options": [
+            { "label": "Co-dominance", "correct": false },
+            { "label": "Pleiotropy", "correct": true },
+            { "label": "Incomplete dominance", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Which of the following is a chromosomal disorder in humans?",
+          "options": [
+            { "label": "Haemophilia", "correct": false },
+            { "label": "Down's syndrome (Trisomy 21)", "correct": true },
+            { "label": "Thalassemia", "correct": false }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "Molecular Basis of Inheritance & Evolution",
+      "questions": [
+        {
+          "prompt": "The flow of genetic information from DNA to RNA to Protein is termed as the:",
+          "options": [
+            { "label": "Central dogma", "correct": true },
+            { "label": "Genetic code", "correct": false },
+            { "label": "Lac Operon", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The Modern Synthetic Theory of Evolution emphasizes which two mechanisms for variation?",
+          "options": [
+            { "label": "Gene flow and genetic drift", "correct": false },
+            { "label": "Mutation and recombination", "correct": true },
+            { "label": "Adaptive radiation and speciation", "correct": false }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "Biology and Human Welfare & Biotechnology",
+      "questions": [
+        {
+          "prompt": "The process of raising plants from a single cell or a small piece of tissue in a laboratory setting is called:",
+          "options": [
+            { "label": "Biofortification", "correct": false },
+            { "label": "Plant breeding", "correct": false },
+            { "label": "Tissue culture", "correct": true }
+          ]
+        },
+        {
+          "prompt": "The technique used to identify an individual by examining variations in their DNA sequence is:",
+          "options": [
+            { "label": "Gene therapy", "correct": false },
+            { "label": "DNA finger printing", "correct": true },
+            { "label": "Human Genome Project", "correct": false }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "title": "Ecology and Environment & Conservation",
+      "questions": [
+        {
+          "prompt": "Which is an example of a mutualistic relationship in population interactions?",
+          "options": [
+            { "label": "A parasite living on a host", "correct": false },
+            { "label": "A predator hunting prey", "correct": false },
+            { "label": "Lichens (algae and fungi)", "correct": true }
+          ]
+        },
+        {
+          "prompt": "The major cause of ozone depletion in the atmosphere is the release of:",
+          "options": [
+            { "label": "Carbon Dioxide", "correct": false },
+            { "label": "Chlorofluorocarbons (CFCs)", "correct": true },
+            { "label": "Nitrogen gas", "correct": false }
+          ]
+        }
+      ]
+    }
+  },
+  "MAT12": {
+    "1": {
+      "title": "Relations, Functions, & Inverse Trigonometric Functions",
+      "questions": [
+        {
+          "prompt": "A relation R on a set A is an equivalence relation if it is:",
+          "options": [
+            { "label": "Reflexive and Symmetric", "correct": false },
+            { "label": "Symmetric and Transitive", "correct": false },
+            { "label": "Reflexive, Symmetric, and Transitive", "correct": true }
+          ]
+        },
+        {
+          "prompt": "The range of $\\sin^{-1}(x)$ (principal value branch) is:",
+          "options": [
+            { "label": "$[0, \\pi]$", "correct": false },
+            { "label": "$[-\\pi/2, \\pi/2]$", "correct": true },
+            { "label": "$(-1, 1)$", "correct": false }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "Matrices and Determinants",
+      "questions": [
+        {
+          "prompt": "If for a matrix A, $A^T = -A$, then the matrix A is called a:",
+          "options": [
+            { "label": "Symmetric matrix", "correct": false },
+            { "label": "Identity matrix", "correct": false },
+            { "label": "Skew-symmetric matrix", "correct": true }
+          ]
+        },
+        {
+          "prompt": "The determinant of a matrix is used to find the:",
+          "options": [
+            { "label": "Transpose of a matrix", "correct": false },
+            { "label": "Area of a triangle with given vertices", "correct": true },
+            { "label": "Order of a matrix", "correct": false }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "Linear Programming",
+      "questions": [
+        {
+          "prompt": "The function that is maximized or minimized in a Linear Programming Problem (LPP) is called the:",
+          "options": [
+            { "label": "Constraint", "correct": false },
+            { "label": "Feasible region", "correct": false },
+            { "label": "Objective function", "correct": true }
+          ]
+        },
+        {
+          "prompt": "The set of all points that satisfy the constraints in an LPP is called the:",
+          "options": [
+            { "label": "Feasible solution", "correct": false },
+            { "label": "Infeasible solution", "correct": false },
+            { "label": "Feasible region", "correct": true }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "Continuity, Differentiability, & Applications of Derivatives",
+      "questions": [
+        {
+          "prompt": "If a function is differentiable at a point, then it must also be:",
+          "options": [
+            { "label": "Continuous at that point", "correct": true },
+            { "label": "Inverse at that point", "correct": false },
+            { "label": "A constant function", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The derivative is zero at the local maxima or local minima of a function. This is key to which application of derivatives?",
+          "options": [
+            { "label": "Rate of change of bodies", "correct": false },
+            { "label": "Tangents and Normals", "correct": false },
+            { "label": "Maxima and Minima (First Derivative Test)", "correct": true }
+          ]
+        }
+      ]
+    },
+    "5": {
+      "title": "Integrals & Applications of Integrals",
+      "questions": [
+        {
+          "prompt": "Integration is defined as the inverse process of:",
+          "options": [
+            { "label": "Addition", "correct": false },
+            { "label": "Differentiation", "correct": true },
+            { "label": "Multiplication", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The fundamental theorem of calculus relates integration to:",
+          "options": [
+            { "label": "Limits of a sum", "correct": false },
+            { "label": "Differentiation (Anti-derivatives)", "correct": true },
+            { "label": "Area of an ellipse", "correct": false }
+          ]
+        }
+      ]
+    },
+    "6": {
+      "title": "Differential Equations",
+      "questions": [
+        {
+          "prompt": "The **order** of a differential equation is defined by the:",
+          "options": [
+            { "label": "Highest power of the highest derivative", "correct": false },
+            { "label": "Highest derivative order present in the equation", "correct": true },
+            { "label": "Number of variables", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The process of finding a solution by separating terms with one variable to one side and terms with the other variable to the other side is called:",
+          "options": [
+            { "label": "Homogeneous equation method", "correct": false },
+            { "label": "Method of separation of variables", "correct": true },
+            { "label": "Linear differential equation method", "correct": false }
+          ]
+        }
+      ]
+    },
+    "7": {
+      "title": "Vectors and Three-Dimensional Geometry",
+      "questions": [
+        {
+          "prompt": "The result of the cross product of two parallel vectors is:",
+          "options": [
+            { "label": "A scalar magnitude of zero", "correct": false },
+            { "label": "A non-zero vector", "correct": false },
+            { "label": "A zero vector", "correct": true }
+          ]
+        },
+        {
+          "prompt": "The shortest distance between two lines is a key concept in 3D geometry when the lines are:",
+          "options": [
+            { "label": "Parallel", "correct": true },
+            { "label": "Intersecting", "correct": false },
+            { "label": "Skew lines", "correct": true }
+          ]
+        }
+      ]
+    }
+  },
+  "ENG12": {
+    "1": {
+      "title": "Prose: My Greatest Olympic Prize & On Examinations",
+      "questions": [
+        {
+          "prompt": "In 'My Greatest Olympic Prize', the author emphasizes the importance of:",
+          "options": [
+            { "label": "Winning the gold medal at any cost", "correct": false },
+            { "label": "Friendship and fair play over medals", "correct": true },
+            { "label": "Setting new world records", "correct": false }
+          ]
+        },
+        {
+          "prompt": "Winston Churchill's essay 'On Examinations' is primarily a reflection on:",
+          "options": [
+            { "label": "His passion for academics", "correct": false },
+            { "label": "The flaws in the examination system and his own struggles with it", "correct": true },
+            { "label": "The importance of rote learning", "correct": false }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "title": "Prose: The Portrait of a Lady & The Magic of Teamwork",
+      "questions": [
+        {
+          "prompt": "In 'The Portrait of a Lady', what is the author's initial description of his grandmother, reflecting her spirituality?",
+          "options": [
+            { "label": "A brilliant scholar", "correct": false },
+            { "label": "A religious and gentle old woman", "correct": true },
+            { "label": "A modern, urban lady", "correct": false }
+          ]
+        },
+        {
+          "prompt": "The message of 'The Magic of Teamwork' centers on achieving success through:",
+          "options": [
+            { "label": "Individual genius", "correct": false },
+            { "label": "Collaboration and collective effort", "correct": true },
+            { "label": "Competition", "correct": false }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "title": "Poetry: Daffodils & The Ballad of Father Gilligan",
+      "questions": [
+        {
+          "prompt": "In 'Daffodils', the poet's experience of seeing the flowers results in a feeling of:",
+          "options": [
+            { "label": "Anxiety and fear", "correct": false },
+            { "label": "Wealth and greed", "correct": false },
+            { "label": "Joy and inner pleasure that lasts (bliss of solitude)", "correct": true }
+          ]
+        },
+        {
+          "prompt": "The central idea of 'The Ballad of Father Gilligan' revolves around:",
+          "options": [
+            { "label": "A great battle", "correct": false },
+            { "label": "God's mercy and divine intervention", "correct": true },
+            { "label": "The difficulty of sailing", "correct": false }
+          ]
+        }
+      ]
+    },
+    "4": {
+      "title": "Non-Detailed: The Doctor's Word & The Nightingale and the Rose",
+      "questions": [
+        {
+          "prompt": "What did Dr. Raman tell the dying Gopa to inspire him to live in 'The Doctor's Word'?",
+          "options": [
+            { "label": "That he needed to sign a will", "correct": false },
+            { "label": "A word of assurance that he would live", "correct": true },
+            { "label": "That his business was failing", "correct": false }
+          ]
+        },
+        {
+          "prompt": "In Oscar Wilde's 'The Nightingale and the Rose', the Nightingale sacrifices its life for:",
+          "options": [
+            { "label": "A magical item", "correct": false },
+            { "label": "Love, symbolized by a red rose", "correct": true },
+            { "label": "Friendship", "correct": false }
           ]
         }
       ]
