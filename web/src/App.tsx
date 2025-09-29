@@ -2,17 +2,17 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 type SessionLike = { user?: { id: string } } | null;
 import { supabase, envOk } from './lib/supabaseClient.ts';
-import { SubjectView } from './pages/student/SubjectView.tsx';
 
 import { Header } from './components/Header.tsx';
 import { Landing } from './pages/Landing.tsx';
 import { AuthPage } from './pages/AuthPage.tsx';
-import { StudentOnboarding } from './pages/StudentOnboarding.tsx';
 import { StudentDashboard } from './pages/student/StudentDashboard.tsx';
 import { TeacherDashboard } from './pages/teacher/TeacherDashboard.tsx';
 import { Lesson } from './pages/student/Lesson.tsx';
 import { Leaderboard } from './pages/Leaderboard.tsx';
 import { Quests } from './pages/Quests.tsx';
+// === CRITICAL NEW IMPORT ===
+import { SubjectView } from './pages/student/SubjectView.tsx'; 
 
 function App() {
   const [session, setSession] = useState<SessionLike>(null);
@@ -22,27 +22,42 @@ function App() {
   useEffect(() => {
     const load = async () => {
       try {
+        console.log('App load starting...');
         const { data: { session: s } } = await supabase.auth.getSession();
+        console.log('Session:', s ? 'exists' : 'null');
         setSession(s);
         if (s?.user) {
           const userId = s.user.id;
-          const [{ data: student }, { data: teacher }] = await Promise.all([
-            supabase.from('student_profiles').select('id, grade').eq('id', userId).maybeSingle(),
+          console.log('User ID:', userId);
+          const [{ data: teacher, error: teacherError }, { data: student, error: studentError }] = await Promise.all([
             supabase.from('teacher_profiles').select('id').eq('id', userId).maybeSingle(),
+            supabase.from('student_profiles').select('id, grade').eq('id', userId).maybeSingle(),
           ]);
-          if (student) setProfileRole('student');
-          else if (teacher) setProfileRole('teacher');
-          else setProfileRole(null);
+          console.log('Teacher profile query:', teacher, 'Error:', teacherError);
+          console.log('Student profile query:', student, 'Error:', studentError);
+          if (teacher) {
+            console.log('Profile role set to teacher');
+            setProfileRole('teacher');
+          } else if (student) {
+            console.log('Profile role set to student');
+            setProfileRole('student');
+          } else {
+            console.log('No profile found, role null');
+            setProfileRole(null);
+          }
+        } else {
+          console.log('No user in session');
         }
       } catch (e) {
-        // eslint-disable-next-line no-console
-        console.error('Init error', e);
+        console.error('App init error:', e);
       } finally {
         setIsLoading(false);
+        console.log('App load complete');
       }
     };
     load();
     const { data: listener } = supabase.auth.onAuthStateChange((_event, newSession) => {
+      console.log('Auth state change:', _event, newSession ? 'session exists' : 'no session');
       setSession(newSession as unknown as SessionLike);
     });
     return () => listener.subscription.unsubscribe();
@@ -58,24 +73,19 @@ function App() {
     );
   }
 
-  const DebugBar = (
-    <div style={{ position: 'fixed', bottom: 8, right: 8, background: '#111827', color: 'white', borderRadius: 8, padding: '6px 10px', fontSize: 12, opacity: 0.7 }}>
-      env:{String(envOk)} load:{String(isLoading)} ses:{String(Boolean(session))} role:{profileRole||'-'}
-    </div>
-  );
-
-  if (isLoading) return <div style={{ padding: 24 }}>Loading…{DebugBar}</div>;
+  if (isLoading) return <div style={{ padding: 24 }}>Loading…</div>;
 
   return (
     <BrowserRouter>
       <Header session={session} profileRole={profileRole} />
-      {DebugBar}
       <Routes>
-        <Route path="/" element={!session ? <Landing /> : (profileRole === 'student' ? <Navigate to="/student" replace /> : (profileRole === 'teacher' ? <Navigate to="/teacher" replace /> : <Navigate to="/onboarding" replace />))} />
-        <Route path="/auth" element={!session ? <AuthPage /> : (profileRole === 'student' ? <Navigate to="/student" replace /> : (profileRole === 'teacher' ? <Navigate to="/teacher" replace /> : <Navigate to="/onboarding" replace />))} />
-        <Route path="/onboarding" element={session ? <StudentOnboarding /> : <Navigate to="/auth" replace />} />
+        <Route path="/" element={!session ? <Landing /> : (profileRole === 'student' ? <Navigate to="/student" replace /> : (profileRole === 'teacher' ? <Navigate to="/teacher" replace /> : <Navigate to="/auth" replace />))} />
+        <Route path="/auth" element={!session ? <AuthPage /> : (profileRole === 'student' ? <Navigate to="/student" replace /> : (profileRole === 'teacher' ? <Navigate to="/teacher" replace /> : <Navigate to="/auth" replace />))} />
         <Route path="/student" element={session ? <StudentDashboard /> : <Navigate to="/auth" replace />} />
+        
+        {/* === VERIFIED NEW ROUTE === */}
         <Route path="/subject/:subjectId" element={session ? <SubjectView /> : <Navigate to="/auth" replace />} />
+        
         <Route path="/teacher" element={session && profileRole === 'teacher' ? <TeacherDashboard /> : <Navigate to="/auth" replace />} />
         <Route path="/lesson/:lessonId" element={session && profileRole === 'student' ? <Lesson /> : <Navigate to="/auth" replace />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
@@ -86,4 +96,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; App;

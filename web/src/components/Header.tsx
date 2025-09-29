@@ -15,25 +15,36 @@ export function Header({ session, profileRole }: HeaderProps) {
     navigate('/');
   };
   return (
-    <header className="w-full sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="font-bold text-xl text-orange-600">Shiksha Bandhu</Link>
-        <nav className="flex items-center gap-3">
+    <header className="w-full sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        <Link to="/" className="font-bold text-2xl bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Shiksha Bandhu</Link>
+        <nav className="flex items-center gap-4">
           {session && (
-            profileRole === 'teacher' ? (
-              <Link to="/teacher" className="text-sm text-gray-700">Dashboard</Link>
-            ) : profileRole === 'student' ? (
-              <Link to="/student" className="text-sm text-gray-700">Dashboard</Link>
-            ) : (
-              <Link to="/onboarding" className="text-sm text-gray-700">Onboarding</Link>
-            )
+            <>
+              {profileRole === 'teacher' ? (
+                <Link to="/teacher" className="px-4 py-2 text-sm font-medium text-gray-700 rounded-xl hover:bg-orange-50 transition-colors">Dashboard</Link>
+              ) : profileRole === 'student' ? (
+                <Link to="/student" className="px-4 py-2 text-sm font-medium text-gray-700 rounded-xl hover:bg-orange-50 transition-colors">Dashboard</Link>
+              ) : (
+                <Link to="/onboarding" className="px-4 py-2 text-sm font-medium text-gray-700 rounded-xl hover:bg-orange-50 transition-colors">Onboarding</Link>
+              )}
+              <Link to="/leaderboard" className="px-4 py-2 text-sm font-medium text-gray-700 rounded-xl hover:bg-orange-50 transition-colors">Leaderboard</Link>
+              <Link to="/quests" className="px-4 py-2 text-sm font-medium text-gray-700 rounded-xl hover:bg-orange-50 transition-colors">Quests</Link>
+              <button 
+                onClick={logout} 
+                className="px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl hover:from-gray-900 hover:to-black shadow-md transition-all"
+              >
+                Logout
+              </button>
+            </>
           )}
-          <Link to="/leaderboard" className="text-sm text-gray-700">Leaderboard</Link>
-          <Link to="/quests" className="text-sm text-gray-700">Quests</Link>
-          {!session ? (
-            <Link to="/auth" className="rounded-full bg-orange-500 text-white px-4 py-2 text-sm">Login</Link>
-          ) : (
-            <button onClick={logout} className="rounded-full bg-gray-900 text-white px-4 py-2 text-sm">Logout</button>
+          {!session && (
+            <Link 
+              to="/auth" 
+              className="px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl hover:from-orange-600 hover:to-orange-700 shadow-md transition-all"
+            >
+              Get Started
+            </Link>
           )}
         </nav>
       </div>

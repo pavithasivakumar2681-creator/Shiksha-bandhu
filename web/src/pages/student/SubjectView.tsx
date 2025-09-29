@@ -1,11 +1,15 @@
+// File: web/src/pages/student/SubjectView.tsx
+
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { supabase } from '../../lib/supabaseClient';
 import LessonPath from '../../components/LessonPath';
+// Import LessonPath types for clean code
+type Lesson = { id: string; title: string; order_index: number; xp_reward: number };
+type Progress = { lesson_id: string; status: 'locked'|'unlocked'|'completed'; best_score: number | null };
+
 
 type Subject = { id: string; name: string; code: string; description: string };
-type Lesson = { id: string; subject_id: string; title: string; order_index: number; xp_reward: number };
-type Progress = { lesson_id: string; status: 'locked'|'unlocked'|'completed'; best_score: number | null };
 
 export function SubjectView() {
   const { subjectId } = useParams<{ subjectId: string }>();
@@ -33,11 +37,8 @@ export function SubjectView() {
         { data: allLessons },
         { data: prog }
       ] = await Promise.all([
-        // Fetch Subject details (using a placeholder description field for UI)
         supabase.from('subjects').select('id, name, code').eq('id', subjectId).maybeSingle(),
-        // Fetch Lessons for this subject
         supabase.from('lessons').select('id, subject_id, title, order_index, xp_reward').eq('subject_id', subjectId).order('order_index'),
-        // Fetch User Progress for this subject's lessons
         supabase.from('student_progress').select('lesson_id, status, best_score').eq('student_id', user.id)
       ]);
 
@@ -46,12 +47,12 @@ export function SubjectView() {
         return;
       }
       
-      // Manually add description placeholder for now
       const subjectData: Subject = { 
           id: subj.id, 
           name: subj.name, 
           code: subj.code, 
-          description: `Mastering Grade ${user.user_metadata.grade} ${subj.name} concepts.` 
+          // Provide descriptive text based on fetched name/grade
+          description: `Mastering Grade ${user.user_metadata?.grade || 11} ${subj.name} concepts.` 
       };
       setSubject(subjectData);
 

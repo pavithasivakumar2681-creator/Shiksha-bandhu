@@ -6,17 +6,12 @@ create table if not exists public.subjects (
   grade int not null check (grade in (11,12)),
   created_at timestamp with time zone default now()
 );
-create table if not exists public.teacher_profiles (
-  id uuid primary key references auth.users(id) on delete cascade,
-  full_name text,
-  school text,
-  created_at timestamp with time zone default now()
-);
 create table if not exists public.student_profiles (
   id uuid primary key references auth.users(id) on delete cascade,
   full_name text,
   grade int check (grade in (11,12)),
   section text,
+  email text,
   created_at timestamp with time zone default now()
 );
 create table if not exists public.lessons (
