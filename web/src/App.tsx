@@ -44,6 +44,8 @@ function App() {
           } else {
             console.log('No profile found, role null');
             setProfileRole(null);
+            // Cannot use navigate here because not inside Router context
+            // Consider setting a flag to redirect after render
           }
         } else {
           console.log('No user in session');
@@ -79,6 +81,9 @@ function App() {
     <BrowserRouter>
       <Header session={session} profileRole={profileRole} />
       <Routes>
+        {profileRole === null && session && (
+          <Route path="*" element={<Navigate to="/onboarding" replace />} />
+        )}
         <Route path="/" element={!session ? <Landing /> : (profileRole === 'student' ? <Navigate to="/student" replace /> : (profileRole === 'teacher' ? <Navigate to="/teacher" replace /> : <Navigate to="/auth" replace />))} />
         <Route path="/auth" element={!session ? <AuthPage /> : (profileRole === 'student' ? <Navigate to="/student" replace /> : (profileRole === 'teacher' ? <Navigate to="/teacher" replace /> : <Navigate to="/auth" replace />))} />
         <Route path="/student" element={session ? <StudentDashboard /> : <Navigate to="/auth" replace />} />
